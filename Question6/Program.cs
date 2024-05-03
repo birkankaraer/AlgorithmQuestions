@@ -12,6 +12,32 @@
 
             //Solution2();
 
+            //Solution3();
+
+            Console.WriteLine("Lütfen doğum tarihinizi giriniz");
+            DateTime dogumTarihi = DateTime.Parse(Console.ReadLine());
+            DateTime now = DateTime.Now;
+            int yas = (now - dogumTarihi).Days;
+            int sonuc = yas / 365;
+            Console.WriteLine($"{sonuc} yaşındasınız");
+
+            int kacGunKaldi = ((dogumTarihi.Month - now.Month) * 30) + (dogumTarihi.Day - now.Day);
+            Console.WriteLine($"Doğum gününüze {kacGunKaldi} gün kaldı");
+
+
+        }
+
+        private static void Solution3()
+        {
+            Console.WriteLine("lütfen doğum tarihinizi giriniz");
+            DateTime dogumTarihi = DateTime.Parse(Console.ReadLine());
+            DateTime bugun = DateTime.Now;
+
+            int yas = bugun.Year - dogumTarihi.Year;
+
+            if (dogumTarihi > bugun.AddYears(-yas)) { yas--; }
+
+            Console.WriteLine(yas);
         }
 
         private static void Solution2()

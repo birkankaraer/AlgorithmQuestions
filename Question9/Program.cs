@@ -8,7 +8,7 @@
 
             //Solution();
 
-            //pozitif sayılarda çarpma işlemini toplama kullanarak bulan uygulamayı yazınız, recursive ile.
+            //Write an application that finds multiplication of positive numbers using addition, recursive.
 
             //Solution3();
 

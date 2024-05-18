@@ -8,20 +8,32 @@
 
             //Solution1();
 
+            //Solution2();
+
+            Console.WriteLine("lütfen bir sayı giriniz");
+            int s1 = int.Parse(Console.ReadLine());
+            int sonuc = BasamakHesapla(s1);
+            Console.WriteLine(++sonuc);
+
+
+        }
+
+        private static void Solution2()
+        {
             Console.WriteLine("give me number");
             float s1 = float.Parse(Console.ReadLine());
-            int i;
-            for (i = 0; i < 100000; i++)
+            int i = 0;
+            for (; ; )
             {
                 s1 = s1 / 10;
+                i++;
                 if (s1 < 1)
                 {
-                    i++;
+
                     break;
                 }
             }
             Console.WriteLine(i);
-
         }
 
         private static void Solution1()
@@ -40,6 +52,14 @@
                 }
             }
             Console.WriteLine(sayac);
+        }
+
+        static public int BasamakHesapla(int s1)
+        {
+            s1 /=  10;
+            if (s1 >= 10)
+                return 1 + BasamakHesapla(s1);
+            return 1;
         }
     }
 }

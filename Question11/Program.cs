@@ -10,12 +10,20 @@
 
             //Solution2();
 
+            //Solution3();
+
+            Console.WriteLine("lütfen bir sayı giriniz");
+            string sayi = Console.ReadLine();
+            Console.WriteLine(sayi.Length);
+
+        }
+
+        private static void Solution3()
+        {
             Console.WriteLine("lütfen bir sayı giriniz");
             int s1 = int.Parse(Console.ReadLine());
             int sonuc = BasamakHesapla(s1);
             Console.WriteLine(++sonuc);
-
-
         }
 
         private static void Solution2()
